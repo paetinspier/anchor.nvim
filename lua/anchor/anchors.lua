@@ -1,6 +1,7 @@
 local M = {}
 
 M.anchors = {}
+vim.fn.sign_define("AnchorSign", { text = "⚓️", texthl = "Error" })
 
 function M.drop_anchor()
 	-- get current line number
@@ -10,6 +11,8 @@ function M.drop_anchor()
 		table.insert(M.anchors, line)
 		table.sort(M.anchors)
 		print("anchor dropped at line " .. line)
+
+		vim.fn.sign_place(1000 + line, "AnchorGroup", "AnchorSign", vim.fn.bufnr("%"), { lnum = line })
 	else
 		print("anchor already dropped")
 	end
@@ -23,6 +26,7 @@ function M.remove_anchor()
 		for i, anchor in ipairs(M.anchors) do
 			if anchor == line then
 				table.remove(M.anchors, i)
+				vim.fn.sign_unplace("AnchorGroup", { buffer = vim.fn.bufnr("%"), id = 1000 + line })
 				print("removed anchor at line " .. line)
 				return
 			end
@@ -46,7 +50,8 @@ function M.pull_next_anchor()
 		end
 	end
 
-	print("you have sailed past all anchors")
+	vim.api.nvim_win_set_cursor(0, { M.anchors[1], 0 })
+	-- print("you have sailed past all anchors")
 end
 
 function M.locate_anchors()

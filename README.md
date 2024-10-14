@@ -15,7 +15,7 @@
 
 ## Installation
 
-With [Lazy.nvim](https://github.com/folke/lazy.nvim):
+#### Using [Lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
@@ -24,7 +24,18 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
     require('anchor')
   end
 }
+```
 
+#### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+```lua
+use 'paetinspier/anchor.nvim'
+```
+
+#### Using [vim-plug](https://github.com/junegunn/vim-plug)
+
+```vim
+Plug 'paetinspier/anchor.nvim'
 ```
 
 ## Usage

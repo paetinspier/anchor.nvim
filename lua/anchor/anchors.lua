@@ -34,6 +34,14 @@ function M.remove_anchor()
 	end
 end
 
+function M.remove_all_anchors()
+	for i, anchor in ipairs(M.anchors) do
+		table.remove(M.anchors, i)
+		vim.fn.sign_unplace("AnchorGroup", { buffer = vim.fn.bufnr("%"), id = 1000 + line })
+	end
+	print("removed all anchors")
+end
+
 function M.pull_next_anchor()
 	local line = vim.fn.line(".")
 

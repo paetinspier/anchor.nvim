@@ -41,10 +41,6 @@ Each command can be executed from the command line or mapped to keybindings for 
 
 ### Commands Overview
 
-For this section, a **table** format organizes command names and descriptions in a structured way:
-
-## Commands Overview
-
 | Command                    | Description                               |
 | -------------------------- | ----------------------------------------- |
 | `:Anchor DropAnchor`       | Drop an anchor at the current line.       |

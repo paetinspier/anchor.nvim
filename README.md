@@ -1,2 +1,3 @@
 # anchor.nvim
-Anchors in code
+
+WIP: anchor nvim plugin

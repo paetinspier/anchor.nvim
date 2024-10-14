@@ -26,3 +26,31 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
 }
 
 ```
+
+## Usage
+
+Anchor.nvim provides the following commands:
+
+- **:Anchor DropAnchor** - Drops an anchor at the current line.
+- **:Anchor RemoveAnchor** - Removes an anchor from the current line.
+- **:Anchor RemoveAllAnchors** - Removes all anchors from the current buffer.
+- **:Anchor PullAnchor** - Navigates to the next anchor, if present.
+- **:Anchor LocateAnchors** - Lists all anchors in the current buffer with line numbers.
+
+Each command can be executed from the command line or mapped to keybindings for quick access.
+
+### Commands Overview
+
+For this section, a **table** format organizes command names and descriptions in a structured way:
+
+```markdown
+## Commands Overview
+
+| Command                    | Description                               |
+| -------------------------- | ----------------------------------------- |
+| `:Anchor DropAnchor`       | Drop an anchor at the current line.       |
+| `:Anchor RemoveAnchor`     | Remove an anchor from the current line.   |
+| `:Anchor RemoveAllAnchors` | Remove all anchors in the current buffer. |
+| `:Anchor PullAnchor`       | Move the cursor to the next anchor.       |
+| `:Anchor LocateAnchors`    | List all anchors with line numbers.       |
+```

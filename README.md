@@ -43,7 +43,6 @@ Each command can be executed from the command line or mapped to keybindings for 
 
 For this section, a **table** format organizes command names and descriptions in a structured way:
 
-```markdown
 ## Commands Overview
 
 | Command                    | Description                               |
@@ -53,4 +52,3 @@ For this section, a **table** format organizes command names and descriptions in
 | `:Anchor RemoveAllAnchors` | Remove all anchors in the current buffer. |
 | `:Anchor PullAnchor`       | Move the cursor to the next anchor.       |
 | `:Anchor LocateAnchors`    | List all anchors with line numbers.       |
-```

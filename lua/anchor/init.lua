@@ -73,3 +73,7 @@ vim.api.nvim_create_user_command("Anchor", my_cmd, {
 	end,
 	bang = true, -- If you want to support ! modifiers
 })
+
+vim.keymap.set("n", "<Plug>(MyPluginAction)", function()
+	print("Hello")
+end, { noremap = true })
